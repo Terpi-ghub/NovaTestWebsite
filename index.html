@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nova</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <title>Nova | Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/NovaNoBg.png" type="image/png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    @font-face {
+      font-family: "Gotham";
+      src: local("Gotham"), local("Gotham Book");
+    }
+    body {
+      font-family: Gotham, "Segoe UI", sans-serif;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <img src="images/NovaNoBg.png" alt="Nova Logo" class="logo" />
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="./index.html">
+        <img src="images/Nova.png" alt="Nova Logo" class="logo-text" />
+      </a>
+      <a class="discord-link" href="https://discord.gg/VwN8jXAKpd" target="_blank">
+        <div class="discord-hover">
+          <span class="discord-normal">Join our Discord</span>
+          <span class="discord-hovered">Click to Join</span>
+        </div>
+      </a>
+    </div>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="terms.html">Terms of Service</a></li>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="staff.html">Staff</a></li>
-      </ul>
+      <a href="./index.html" class="active"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="./terms.html"><i class="fa-solid fa-memo"></i> ToS</a>
+      <a href="./privacy.html"><i class="fa-solid fa-file-lock"></i> Privacy Policy</a>
+      <a href="./staff.html"><i class="fa-solid fa-clipboard-user"></i> Staff Page</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>Welcome to Nova</h1>
-      <p>Your gateway to the stars.</p>
-      <a href="https://discord.gg/VwN8jXAKpd" class="discord-link">
-        <span class="default-text">Join our Discord</span>
-        <span class="hover-text">Click to Join</span>
-      </a>
-    </section>
+  <main class="home">
+    <img src="images/NovaNoBg.png" alt="Nova Main Logo" class="main-logo" />
+    <p><i class="fa-solid fa-house"></i> Welcome to <strong>Nova</strong> — Where community and creativity collide!</p>
   </main>
 
   <footer>
-    <p>&copy; 2025 Nova Roblox. All rights reserved.</p>
+    © 2025 Nova Development Services. All rights reserved.
   </footer>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
