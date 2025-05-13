@@ -1,4 +1,12 @@
-/* Reset and base styles */
+:root {
+  --accent: #2d1886;
+  --dark: #0c132d;
+  --text: #b8bbcd;
+  --text-hover: #ffffff;
+  --bg: #090e21;
+  --bg-secondary: #091027;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,156 +14,114 @@
 }
 
 body {
-  background-color: #090e21;
-  color: #b8bbcd;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: Gotham, "Segoe UI", sans-serif;
+  font-weight: bold;
+  text-align: center;
 }
 
 a {
-  color: #2d1886;
   text-decoration: none;
+  color: var(--text);
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #b8bbcd;
+  color: var(--text-hover);
 }
 
-/* Header */
-header {
-  background-color: #0c132d;
-  padding: 20px;
+header.navbar {
+  background-color: var(--dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid var(--accent);
+  flex-wrap: wrap;
+}
+
+.navbar .nav-left {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 1rem;
 }
 
-.logo {
-  height: 50px;
+.logo-text {
+  height: 40px;
+  border-radius: 12px;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
+nav a {
+  margin-left: 1rem;
+  font-size: 1rem;
 }
 
-nav ul li a {
-  padding: 8px 12px;
-  border-radius: 5px;
+nav a.active {
+  color: var(--accent);
 }
 
-nav ul li a:hover {
-  background-color: #2d1886;
-  color: #fff;
+.home {
+  padding: 3rem 1rem;
 }
 
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-  background-color: #091027;
-}
-
-.hero h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.2em;
-  margin-bottom: 40px;
+.main-logo {
+  width: 220px;
+  margin: 2rem auto;
+  display: block;
+  border-radius: 16px;
 }
 
 .discord-link {
-  display: inline-block;
   position: relative;
   overflow: hidden;
-  padding: 12px 24px;
-  background-color: #2d1886;
-  color: #fff;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
 }
 
-.discord-link .hover-text {
+.discord-hover {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  color: white;
+  padding: 0 1rem;
+  font-weight: bold;
+  background: var(--accent);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.discord-hover span {
   position: absolute;
-  top: 100%;
-  left: 0;
   width: 100%;
   text-align: center;
-  transition: top 0.3s ease;
-}
-
-.discord-link:hover .hover-text {
-  top: 0;
-}
-
-.discord-link .default-text {
-  display: block;
-  transition: top 0.3s ease;
-}
-
-.discord-link:hover .default-text {
-  top: -100%;
-}
-
-/* Content Section */
-.content {
-  padding: 60px 20px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Staff Section */
-.staff-section {
-  padding: 60px 20px;
-  background-color: #091027;
-  text-align: center;
-}
-
-.staff-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 40px;
-}
-
-.staff-card {
-  background-color: #0c132d;
-  padding: 20px;
-  border-radius: 10px;
-  width: 200px;
   transition: transform 0.3s ease;
 }
 
-.staff-card:hover {
-  transform: translateY(-5px);
+.discord-normal {
+  transform: translateY(0%);
 }
 
-.staff-card img {
-  width: 100%;
-  border-radius: 50%;
-  margin-bottom: 15px;
+.discord-hovered {
+  transform: translateY(100%);
 }
 
-.staff-card h2 {
-  font-size: 1.2em;
-  margin-bottom: 5px;
+.discord-hover:hover .discord-normal {
+  transform: translateY(-100%);
 }
 
-.staff-card p {
-  font-size: 0.9em;
-  color: #b8bbcd;
+.discord-hover:hover .discord-hovered {
+  transform: translateY(0%);
 }
 
-/* Footer */
 footer {
-  background-color: #0c132d;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+  margin-top: 4rem;
+  padding: 1rem;
+  background-color: var(--dark);
+  color: var(--text);
+  font-size: 0.9rem;
+  border-top: 2px solid var(--accent);
 }
